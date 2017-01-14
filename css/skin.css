@@ -462,7 +462,6 @@ body,
 	left: 0;
 	top: -5.7rem;
 	-webkit-transform: skewY(-4.5deg);
-	-ms-transform: skewY(-4.5deg);
 	transform: skewY(-4.5deg);
 	z-index: 5;
 }
@@ -1183,10 +1182,8 @@ body,
 	left: 0;
 	bottom: 1rem;
 	-webkit-transition-property: width, opacity;
-	-ms-transition-property: width, opacity;
 	transition-property: width, opacity;
 	-webkit-transition-duration: 500ms;
-	-ms-transition-duration: 500ms;
 	transition-duration: 500ms;
 }
 .side-navigation > ul > li.current > a:after {
@@ -1729,12 +1726,9 @@ body,
 .tm-loader #circle{
 	width: 3rem;
 	height: 3rem;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
 	border-radius: 50%;
 	background: none;
 	-webkit-transform-origin: center center;
-	    -ms-transform-origin: center center;
 	    	transform-origin: center center;
 }
 .tm-loader {
@@ -1745,14 +1739,10 @@ body,
 	top: 50%;
 	left: 50%;
 	-webkit-animation:preloader-outer 1.5s ease infinite;
-	   -moz-animation:preloader-outer 1.5s ease infinite;
-	     -o-animation:preloader-outer 1.5s ease infinite;
 	        animation:preloader-outer 1.5s ease infinite;
 }
 .tm-loader #circle{
 	-webkit-animation:preloader 3s ease infinite;
-	   -moz-animation:preloader 3s ease infinite;
-	     -o-animation:preloader 3s ease infinite;
 	        animation:preloader 3s ease infinite;
 }
 .tm-loader #circle{
@@ -1771,8 +1761,8 @@ body,
 	to	 { opacity: 1;	-webkit-transform: rotate( 360deg ); }
 }
 @keyframes preloader-outer{
-	from { opacity: 1;	transform: rotate( 0deg ); }
-	to	 { opacity: 1;	transform: rotate( 360deg ); }
+	from { opacity: 1;	-webkit-transform: rotate( 0deg );	transform: rotate( 0deg ); }
+	to	 { opacity: 1;	-webkit-transform: rotate( 360deg );	transform: rotate( 360deg ); }
 }
 @-webkit-keyframes preloader{
 	0% { opacity: 0.3; }
@@ -3027,32 +3017,24 @@ hr,
 .text-line{
 	width: 0;
 	-webkit-transform: rotate(0deg);
-	   -moz-transform: rotate(0deg);
-	     -o-transform: rotate(0deg);
 		    transform: rotate(0deg);
 	-webkit-transition-property: width, opacity, background-color, transform;
-	   -moz-transition-property: width, opacity, background-color, transform;
-	     -o-transition-property: width, opacity, background-color, transform;
+		    -webkit-transition-property: width, opacity, background-color, -webkit-transform;
+		    transition-property: width, opacity, background-color, -webkit-transform;
 		    transition-property: width, opacity, background-color, transform;
+		    transition-property: width, opacity, background-color, transform, -webkit-transform;
     -webkit-transition-duration: 400ms;
-	   -moz-transition-duration: 400ms;
-	     -o-transition-duration: 400ms;
-	    -ms-transition-duration: 400ms;
 	        transition-duration: 400ms;
 }
 a.animated-link:hover .text-line,
 a.overlay-link:hover .text-line{
 	width: 2rem;
 	-webkit-transform: rotate(0deg);
-	   -moz-transform: rotate(0deg);
-	     -o-transform: rotate(0deg);
 		    transform: rotate(0deg);
 }
 .mobile .text-line,
 a.disabled .text-line{
 	-webkit-transition-property: none;
-	   -moz-transition-property: none;
-	     -o-transition-property: none;
 		    transition-property: none;
 }
 [class*="border-"].thick, 
@@ -3609,7 +3591,10 @@ blockquote.border{
 /* animation */
 .tab-panes .tab-content{
 	-webkit-transition-property: transform, opacity, visibility;
+			-webkit-transition-property: opacity, visibility, -webkit-transform;
+			transition-property: opacity, visibility, -webkit-transform;
 			transition-property: transform, opacity, visibility;
+			transition-property: transform, opacity, visibility, -webkit-transform;
 	-webkit-transition-duration: 1000ms;
 			transition-duration: 1000ms;
 	-webkit-transform: translateY(1rem);
@@ -3684,9 +3669,11 @@ blockquote.border{
 	background-color: #fff;
 }
 .dotted .menu-line{
+	background-image: -webkit-radial-gradient(circle closest-side, #ccc 99%,rgba(0,0,0,0) 0%);
 	background-image: radial-gradient(circle closest-side, #ccc 99%,rgba(0,0,0,0) 0%);
 }
 .dashed .menu-line{
+	background-image:  -webkit-linear-gradient(left, #ccc 50%, rgba(0,0,0,0) 0%);
 	background-image:  linear-gradient(to right, #ccc 50%, rgba(0,0,0,0) 0%);
 }
 
@@ -3778,9 +3765,10 @@ blockquote.border{
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (		 min-device-pixel-ratio: 2),
+only screen and (			-webkit-min-device-pixel-ratio: 2),
 only screen and (			min-resolution: 192dpi),
+only screen and (				-webkit-min-device-pixel-ratio: 2),
 only screen and (				min-resolution: 2dppx) {
 
 	/* Intro Sections */

@@ -3725,3 +3725,23 @@ only screen and (				min-resolution: 2dppx) {
 		background-image: url(../images/travel-agency/generic/signup-1@2x.jpg);
 	}
 }
+
+/* my extra css */
+section.paragraphs {
+    margin-bottom: 20px;
+}
+
+section.paragraphs p{
+    margin-bottom:10px;
+}
+
+section.paragraphs h4{
+    color:#1488ab;
+    margin-top:30px;
+}
+
+.scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
