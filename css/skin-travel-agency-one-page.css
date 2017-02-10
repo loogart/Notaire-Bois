@@ -1514,7 +1514,7 @@ body,
 .featured-media,
 .full-width-slider,
 .parallax{
-	height: 60rem;
+	height: 20rem;
 	padding: 0;
 }
 .window-height{
@@ -1627,7 +1627,7 @@ body,
 /* Mobile Slider & Parallax */
 .mobile .featured-media,
 .mobile .parallax.fixed-height{
-	height: 50rem;
+	height: 60rem;
 }
 
 /* Featured Slider Nav Breakpoints */
