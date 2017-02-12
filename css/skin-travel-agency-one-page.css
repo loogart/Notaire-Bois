@@ -1851,7 +1851,7 @@ body,
 .featured-media,
 .full-width-slider,
 .parallax {
-    height: 20rem;
+    height: 60rem;
     padding: 0;
 }
 
@@ -4674,5 +4674,4 @@ section.paragraphs h4 {
 }
 .jumbotront-gradient {
     background-color:#2a83c6!important;
-
 }
